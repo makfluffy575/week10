@@ -1,0 +1,43 @@
+.title {
+  font-size: 2rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+}
+.gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.gallery__wrap-img {
+  display: flex;
+  justify-content: space-evenly;
+}
+.gallery__photo {
+}
+#elem-img1 {
+  display: none;
+}
+.gallery__wrap-btn {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-around;
+}
+.gallery_btn {
+  height: 2rem;
+  width: 10rem;
+  background-color: black;
+  border-radius: 0.25rem;
+  color: azure;
+  cursor: pointer;
+}
+.gallery_btn:hover {
+  border: 3px darkgray solid;
+}
+.gallery_btn:active {
+  background-color: darkgrey;
+}
+.gallery_btn:disabled{
+  background-color: darkgrey;
+  cursor: none;
+  border: none;
+}
