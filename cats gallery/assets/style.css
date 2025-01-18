@@ -13,6 +13,7 @@
   justify-content: space-evenly;
 }
 .gallery__photo {
+  width: 350px;
 }
 #elem-img1 {
   display: none;

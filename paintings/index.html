@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>МОЯ ГАЛЕРЕЯ</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <h1 class="title">МОЯ ГАЛЕРЕЯ</h1>
+    <div class="gallery">
+      <div class="gallery__wrap-img">
+        <img
+          class="gallery__photo"
+          src="./assets/img/rainbow.png"
+          alt="The rainbow painting"
+        />
+        <img
+          class="gallery__photo"
+          src="./assets/img/the_9th_wave.png"
+          alt="The 9th wave painting"
+        />
+      </div>
+      <button id="btn" class="gallery_btn" onclick="calculateTotalPrice()">
+        Узнать стоимость
+      </button>
+      <button
+        id="btn_no-modal"
+        class="gallery_btn"
+        onclick="calculateTotalPrice()"
+      >
+        Узнать стоимость
+      </button>
+      <div id="wrap-price" class="gallery__wrap-price"></div>
+    </div>
+    <script>
+      //total price function
+      function calculateTotalPrice(quantity = 2, price = 15000000) {
+        const totalPrice = quantity * price;
+        return totalPrice.toLocaleString("ru-RU");
+      }
+      console.log(calculateTotalPrice());
+
+      //btn onclick alert
+      const btn = document.getElementById("btn");
+      console.log(btn);
+      const message = () =>
+        alert(`Стоимость покупки: ${calculateTotalPrice()} рублей`);
+      btn.addEventListener("click", message);
+
+      //btn onclick page
+      const btnNoModal = document.getElementById("btn_no-modal");
+
+      const wrapPrice = document.getElementById("wrap-price");
+
+      console.log(btnNoModal, wrapPrice);
+
+      const messageOnPage = () => {
+        wrapPrice.style.display = "block";
+        wrapPrice.innerText = `Стоимость покупки: ${calculateTotalPrice()} рублей`;
+      };
+      btnNoModal.addEventListener("click", messageOnPage);
+    </script>
+  </body>
+</html>

@@ -31,18 +31,24 @@
         console.log("Я учу JavaScript!");
       }
       learnJavaScript();
+
       const image = document.getElementById("elem-img");
       console.log(image);
+
       const btnBack = document.getElementById("btn");
       console.log(btnBack);
+
       const btnNext = document.getElementById("btn-next");
       console.log(btnNext);
+
       btnBack.disabled = true;
+
       function goBack() {
         image.src = "./assets/img/cat1.jpeg";
         btnBack.disabled = true;
         btnNext.disabled = false;
       }
+
       function changeImage() {
         image.src = "./assets/img/cat2.jpeg";
         btnNext.disabled = true;
